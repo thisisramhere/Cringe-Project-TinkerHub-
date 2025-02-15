@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>For Singles</title>
+</head>
+<body>
+<div class="container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; text-align: center; color: white;">
+    <h1 class="header_text">For Singles By Singles</h1>
+    <p>Feeling lonely? Imagine your perfect dream partner and let us craft a story for you!</p>
+
+    <input type="text" id="dreamInput" placeholder="Describe your dream scenario..." style="padding: 10px; margin: 20px; border-radius: 10px; border: none; width: 60%;">
+    <input type="text" id="partnerTraits" placeholder="Describe your dream partner..." style="padding: 10px; margin: 20px; border-radius: 10px; border: none; width: 60%;">
+    <button onclick="generateStory()" class="btn" style="padding: 15px 30px; border-radius: 12px; border: none; background-color: #4B3E2F; color: white; cursor: pointer;">Generate Story</button>
+
+    <div id="storyOutput" class="comment-box" style="margin-top: 30px; padding: 20px; border-radius: 15px; background-color: #1C1C1C; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); max-width: 80%; text-align: left;"></div>
+</div>
+
+<script>
+    let lastStoryIndex = -1;
+
+    function generateStory() {
+        const dream = document.getElementById('dreamInput').value;
+        const partnerTraits = document.getElementById('partnerTraits').value;
+        const storyOutput = document.getElementById('storyOutput');
+
+        if (!dream || !partnerTraits) {
+            storyOutput.textContent = "Please enter both your dream scenario and partner description to generate a story.";
+            return;
+        }
+
+        const storyTemplates = [
+            `You dream of '${dream}', a quiet coffee shop on a rainy evening. Across the table sits someone with '${partnerTraits}', smiling over a shared pastry and a conversation that flows effortlessly, like an old song rediscovered.
+
+            As the rain taps gently on the window, you realize this is the simple joy you've always wanted: warmth, laughter, and a heart that understands yours.`,
+
+            `In the middle of '${dream}', you find yourself at a bookshop. You reach for a book and touch the hand of someone with '${partnerTraits}'. The shared smile, the lingering touch, the mutual curiosity: the universe conspires to bring you together for this moment and forever after.`,
+
+            `A walk in '${dream}' turns into a magical evening when you meet someone with '${partnerTraits}'. The conversation lasts for hours, and as the sun sets, the chemistry becomes undeniable. You find a person who listens, understands, and shares your dreams.`,
+
+            `You wake up in a cozy cabin in '${dream}', and beside you is someone with '${partnerTraits}', preparing coffee and humming a favorite tune. The morning sunlight bathes the room, highlighting the perfect, simple life you built together.`,
+
+            `In a bustling street fair in '${dream}', you bump into someone with '${partnerTraits}'. Apologies turn into laughter, laughter into conversation, and soon you're both holding hands, exploring the fair and each other's hearts.`,
+
+            `A spontaneous trip to '${dream}' leads you to a small art gallery, where you meet someone with '${partnerTraits}'. The shared love for creativity brings you closer, and the hours pass like seconds as you dream of future adventures together.`,
+
+            `During a lazy Sunday in '${dream}', you encounter someone with '${partnerTraits}' while walking your dog. The conversation starts with pets and grows into dreams, laughter, and endless possibilities.`,
+
+            `In '${dream}', you attend a cooking class just for fun and find yourself partnered with someone having '${partnerTraits}'. The playful banter over spilled flour soon turns into plans for a shared dinner.`,
+
+            `A chance encounter in '${dream}' at a music festival introduces you to someone with '${partnerTraits}'. You sing along to your favorite songs, realizing that some connections need no words to feel magical.`,
+
+            `While exploring '${dream}', a historic city, you ask someone with '${partnerTraits}' for directions. That small conversation turns into a day-long adventure through charming streets and even more charming smiles.`
+        ];
+
+        let randomIndex;
+        do {
+            randomIndex = Math.floor(Math.random() * storyTemplates.length);
+        } while (randomIndex === lastStoryIndex);
+
+        lastStoryIndex = randomIndex;
+        storyOutput.textContent = storyTemplates[randomIndex];
+    }
+</script>
+</body>
+</html>

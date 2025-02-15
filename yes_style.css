@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+}
+
+.header_text {
+    font-family: "Playball", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 80px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.gif {
+    height: 450px;
+}
+
+.gif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+}
+
+.header_text {
+    font-family: "Playball", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 80px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.gif {
+    height: 450px;
+}
+
+.gif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the comment box */
+.comment-box {
+    background-color: #373334;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+
+.btn:hover {
+    background-color: #ff4a3d;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./yes_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+</head> 
+<body>
+    <div class="container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; text-align: center;">
+        <div>
+            <h1 class="header_text">&#127882; Yeeeyyyy!! &#127882;&#127882; </h1>
+        </div>
+        <div class="gif_container" style="margin: 20px 0;">
+            <img src="https://media0.giphy.com/media/T86i6yDyOYz7J6dPhf/giphy.gif"
+                 class="gif" alt="Cute animated illustration">
+        </div>
+        <!-- Comment Display Box -->
+        <div id="commentDisplay" class="comment-box" style="background-color: #222; color: #fff; padding: 15px; border-radius: 10px; font-size: 18px; text-align: center; margin-top: 20px; width: 70%; max-width: 500px; box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);">
+            <!-- Initial comment will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        // Array of comments to be displayed
+        const comments = [
+            "നിനക്ക് തരാം Munch.....  ഉച്ചയ്ക്ക് ആണെങ്കിൽ Lunch..... തരുമോ ഒരു French💖",
+            "Do you have a name, or can I call you mine? 😏",
+            "Do you have a map? Because I keep getting lost in your eyes. 🗺️👀",
+            "കാലിൽ ഇടാൻ ചെരുപ്പ് ..............ചോറിൻ്റ കൂടെ പരുപ് ...............നീ  ആണ് എൻ്റ കുരുപ്പ്",
+            "Do you have a sunburn, or are you always this hot? 🌞🔥",
+            "നീ എനിക്ക് ഒരു കട്ടൻ ഞാൻ ആവട്ടെ നിൻ്റെ കുട്ടൻ 🙈",
+            "Are you a parking ticket? Because you’ve got FINE written all over you. 🚗💳",
+            "നീ tea ആണോ എങ്കിൽ ഞാൻ നിൻ്റെ കടി ആവാം🙈",
+            "കുളിക്കാൻ lux  തേക്കാൻ wax നിനക്ക് തരട്ടേ ഒരു കിസ്സ് 🥰"
+        ];
+
+        // Display a random comment on page load
+        const commentDisplay = document.getElementById('commentDisplay');
+        const randomIndex = Math.floor(Math.random() * comments.length);
+        commentDisplay.textContent = comments[randomIndex];
+    </script>
+</body> 
+</html>
