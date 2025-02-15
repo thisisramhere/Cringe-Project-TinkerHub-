@@ -1,0 +1,169 @@
+/* General Styles */
+body {
+  font-family: 'Orbitron', sans-serif; /* Futuristic font */
+  background: #d9b4b4; /* Dark background */
+  color:  #EE4B2B; /* Neon cyan text */
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: #F4C2C2; /* Semi-transparent dark background */
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid  #EE4B2B; /* Neon cyan border */
+  box-shadow: 0 0 20px rgba(236, 70, 133, 0.5); /* Glowing effect */
+  max-width: 600px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color:  #EE4B2B; /* Neon cyan */
+  text-shadow: 0 0 10px  #EE4B2B, 0 0 20px  #EE4B2B; /* Glowing text */
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color:  #EE4B2B; /* Neon cyan */
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  background-color: transparent;
+  border: 2px solid  #EE4B2B; /* Neon cyan border */
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  color:  #EE4B2B; /* Neon cyan text */
+  transition: all 0.3s ease;
+}
+
+.tabs button:hover {
+  background-color:  #EE4B2B; /* Neon cyan background */
+  color: #0a0a0a; /* Dark text */
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px  #EE4B2B, 0 0 20px  #EE4B2B; /* Glowing effect */
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+  margin-top: 20px;
+}
+
+input, textarea {
+  width: 80%;
+  padding: 12px;
+  margin: 10px 0;
+  background: transparent;
+  border: 2px solid  #EE4B2B; /* Neon cyan border */
+  border-radius: 10px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  color:  #EE4B2B; /* Neon cyan text */
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #ff00ff; /* Neon pink border on focus */
+  outline: none;
+  box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; /* Glowing effect */
+}
+
+button {
+  background-color:  #EE4B2B; /* Neon cyan */
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  color: #0a0a0a; /* Dark text */
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff00ff; /* Neon pink */
+  color: #0a0a0a; /* Dark text */
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; /* Glowing effect */
+}
+
+/* Roast Output */
+.roast-output {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(0, 255, 204, 0.1); /* Light neon cyan background */
+  border-radius: 10px;
+  border: 2px solid  #EE4B2B; /* Neon cyan border */
+  color:  #EE4B2B; /* Neon cyan text */
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Robot GIF */
+.robot-gif {
+  margin-top: 30px;
+  width: 150px;
+  filter: drop-shadow(0 0 10px  #EE4B2B) drop-shadow(0 0 20px  #EE4B2B); /* Glowing effect */
+  transition: transform 0.3s ease;
+}
+
+.robot-gif:hover {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+/* Playlist Button */
+#playlist button {
+  background-color: #ff00ff; /* Neon pink */
+}
+
+#playlist button:hover {
+  background-color:  #EE4B2B; /* Neon cyan */
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px  #EE4B2B, 0 0 20px  #EE4B2B; /* Glowing effect */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .tabs button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  input, textarea {
+    width: 90%;
+  }
+}

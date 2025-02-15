@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoastMe.exe 2.0</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>HeartBreaker 3000</h1>
+    <p class="tagline">"Love is dead. Let’s roast it."</p>
+
+    <!-- Tabs for Features -->
+    <div class="tabs">
+      <button onclick="showTab('personalized')">Personalized Roasts</button>
+      <button onclick="showTab('ex')">Ex Roast Mode</button>
+      <button onclick="showTab('story')">Cringy Love Story Roaster</button>
+      <button onclick="showTab('playlist')">Anti-Valentine’s Playlist</button>
+    </div>
+
+    <!-- Personalized Roasts Tab -->
+    <div id="personalized" class="tab-content">
+      <h2>Personalized Roasts</h2>
+      <p>Tell me something about yourself, and I’ll roast you.</p>
+      <input type="text" id="personalizedInput" placeholder="I love cats and coding...">
+      <button onclick="getPersonalizedRoast()">Roast Me!</button>
+      <p id="personalizedOutput" class="roast-output"></p>
+    </div>
+
+    <!-- Ex Roast Mode Tab -->
+    <div id="ex" class="tab-content" style="display:none;">
+      <h2>Ex Roast Mode</h2>
+      <p>What’s your ex’s name? Let’s roast them.</p>
+      <input type="text" id="exInput" placeholder="Enter your ex’s name...">
+      <button onclick="getExRoast()">Roast My Ex!</button>
+      <p id="exOutput" class="roast-output"></p>
+    </div>
+
+    <!-- Cringy Love Story Roaster Tab -->
+    <div id="story" class="tab-content" style="display:none;">
+      <h2>Cringy Love Story Roaster</h2>
+      <p>Tell me your love story, and I’ll roast it.</p>
+      <textarea id="storyInput" placeholder="We met at a coffee shop..."></textarea>
+      <button onclick="getStoryRoast()">Roast My Story!</button>
+      <p id="storyOutput" class="roast-output"></p>
+    </div>
+
+    <!-- Anti-Valentine’s Playlist Tab -->
+    <div id="playlist" class="tab-content" style="display:none;">
+      <h2>Anti-Valentine’s Playlist</h2>
+      <p>Need some music to cry (or laugh) to? Here’s a playlist for you.</p>
+      <button onclick="openPlaylist()">Open Playlist on Spotify</button>
+    </div>
+
+    <!-- Cringe Robot GIF -->
+    <img src="C:\Users\Navin Bose\Desktop\HeartBreaker 3000\assets\robot.gif.gif" alt="Cringe Robot" class="robot-gif">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
